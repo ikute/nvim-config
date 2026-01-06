@@ -24,9 +24,11 @@ require("lazy").setup({
     spec = {
         {import = "plugin"},
     },
+    rtp = {
+        disabled_plugins = {"netrw", "netrwPlugin"},
+    },
     install = {
         colorscheme = {"vague"},
     },
     checker = {enabled = true},
 })
-
