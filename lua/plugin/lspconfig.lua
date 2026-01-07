@@ -8,6 +8,7 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
         {"mason-org/mason.nvim", opts = {}},
+        "creativenull/efmls-configs-nvim",
     },
     config = function()
         vim.diagnostic.config({
@@ -19,10 +20,12 @@ return {
             },
         })
 
+        require("server.efm-langserver").config({})
         require("server.luals").config({})
 
         vim.lsp.enable({
-            "lua_ls"
+            "efm",
+            "lua_ls",
         })
     end,
 }
