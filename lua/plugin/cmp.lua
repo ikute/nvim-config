@@ -22,6 +22,7 @@ return {
                 format = lspkind.cmp_format({
                     mode = "symbol_text",
                     menu = {
+                        codeium = "",
                         buffer = "",
                         path = "",
                         nvim_lsp = "🅻",
@@ -42,6 +43,7 @@ return {
             }),
 
             sources = {
+                {name = "codeium"},
                 {name = "nvim_lsp"},
                 {name = "buffer"},
                 {name = "path"},
