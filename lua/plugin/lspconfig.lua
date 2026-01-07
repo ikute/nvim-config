@@ -9,6 +9,7 @@ return {
     dependencies = {
         {"mason-org/mason.nvim", opts = {}},
         "creativenull/efmls-configs-nvim",
+        "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
         vim.diagnostic.config({
@@ -20,8 +21,9 @@ return {
             },
         })
 
-        require("server.efm-langserver").config({})
-        require("server.luals").config({})
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        require("server.efm-langserver").config(capabilities)
+        require("server.luals").config(capabilities)
 
         vim.lsp.enable({
             "efm",
