@@ -24,10 +24,12 @@ return {
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         require("server.efm-langserver").config(capabilities)
         require("server.luals").config(capabilities)
+        require("server.clangd").config(capabilities)
 
         vim.lsp.enable({
             "efm",
             "lua_ls",
+            "clangd",
         })
     end,
 }

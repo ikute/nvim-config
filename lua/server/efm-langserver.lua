@@ -6,6 +6,9 @@
 
 return {
     config = function(capabilities)
+        local clangformat = require("efmls-configs.formatters.clang_format")
+        local clangtidy = require("efmls-configs.linters.clang_tidy")
+
         vim.lsp.config("efm", {
             capabilities = capabilities,
             filetypes = {
@@ -29,7 +32,7 @@ return {
             },
             settings = {
                 languages = {
-                    c = {},
+                    c = {clangformat, clangtidy},
                     go = {},
                     html = {},
                     json = {},
