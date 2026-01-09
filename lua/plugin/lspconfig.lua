@@ -25,11 +25,13 @@ return {
         require("server.efm-langserver").config(capabilities)
         require("server.luals").config(capabilities)
         require("server.clangd").config(capabilities)
+        require("server.gopls").config(capabilities)
 
         vim.lsp.enable({
             "efm",
             "lua_ls",
             "clangd",
+            "gopls",
         })
     end,
 }
