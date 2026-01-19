@@ -26,12 +26,14 @@ return {
         require("server.luals").config(capabilities)
         require("server.clangd").config(capabilities)
         require("server.gopls").config(capabilities)
+        require("server.jdtls").config(capabilities)
 
         vim.lsp.enable({
             "efm",
             "lua_ls",
             "clangd",
             "gopls",
+            "jdtls",
         })
     end,
 }
