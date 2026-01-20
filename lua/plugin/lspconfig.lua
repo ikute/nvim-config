@@ -27,6 +27,7 @@ return {
         require("server.clangd").config(capabilities)
         require("server.gopls").config(capabilities)
         require("server.jdtls").config(capabilities)
+        require("server.kotlin-lsp").config(capabilities)
 
         vim.lsp.enable({
             "efm",
@@ -34,6 +35,7 @@ return {
             "clangd",
             "gopls",
             "jdtls",
+            "kotlin_lsp",
         })
     end,
 }
