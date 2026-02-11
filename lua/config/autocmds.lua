@@ -88,7 +88,10 @@ local lsp_fmt_group = vim.api.nvim_create_augroup("FormatOnSaveGroup", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
     group = lsp_fmt_group,
     callback = function()
-        local client_name = (vim.bo.filetype == "java" and "jdtls") or "efm"
+        local client_name = (vim.bo.filetype == "java" and "jdtls")
+            or (vim.bo.filetype == "odin" and "ols")
+            or "efm"
+
         local client = vim.lsp.get_clients({name = client_name})
 
         if vim.tbl_isempty(client) then
