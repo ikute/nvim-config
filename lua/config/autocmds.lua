@@ -89,6 +89,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     group = lsp_fmt_group,
     callback = function()
         local client_name = (vim.bo.filetype == "java" and "jdtls")
+            or (vim.bo.filetype == "zig" and "zls")
             or (vim.bo.filetype == "odin" and "ols")
             or "efm"
 

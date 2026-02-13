@@ -26,6 +26,7 @@ return {
                 "sh",
                 "toml",
                 "yaml",
+                "zig",
             },
             init_options = {
                 documentFormatting = true,
@@ -49,6 +50,7 @@ return {
                     sh = {},
                     toml = {},
                     yaml = {},
+                    zig = {},
                 },
             },
         })
