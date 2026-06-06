@@ -29,6 +29,7 @@ return {
         require("server.jdtls").config(capabilities)
         require("server.kotlin-lsp").config(capabilities)
         require("server.ols").config(capabilities)
+        require("server.rust-analyzer").config(capabilities)
         require("server.zls").config(capabilities)
 
         vim.lsp.enable({
@@ -39,6 +40,7 @@ return {
             "jdtls",
             "kotlin_lsp",
             "ols",
+            "rust_analyzer",
             "zls",
         })
     end,

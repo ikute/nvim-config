@@ -10,6 +10,7 @@ return {
         local clangtidy = require("efmls-configs.linters.clang_tidy")
         local gofmt = require("efmls-configs.formatters.gofmt")
         local golangcilint = require("efmls-configs.linters.golangci_lint")
+        local rustfmt = require("efmls-configs.formatters.rustfmt")
 
         vim.lsp.config("efm", {
             capabilities = capabilities,
@@ -23,6 +24,7 @@ return {
                 "lua",
                 "markdown",
                 "odin",
+                "rust",
                 "sh",
                 "toml",
                 "yaml",
@@ -47,6 +49,7 @@ return {
                     lua = {},
                     markdown = {},
                     odin = {},
+                    rust = {rustfmt},
                     sh = {},
                     toml = {},
                     yaml = {},
